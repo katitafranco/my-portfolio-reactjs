@@ -1,20 +1,20 @@
-// Logo.tsx
+import { useState } from "react";
+
 const Logo = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
   return (
-    <div className="absolute top-6 left-16">
-      <a
-        href="#home"
-        className="text-gray-200 text-3xl font-semibold tracking-wider"
-      >
-        <span className="text-wine text-4xl font-bold hover:scale-110 transition-all">
-          K
-        </span>
-        atita{" "}
-        <span className="text-wine text-4xl font-bold hover:scale-110 transition-all">
-          F
-        </span>
-        ranco
-      </a>
+    <div
+      onClick={handleClick}
+      className={`logo cursor-pointer hover:scale-110 transition-transform ${
+        clicked ? "text-gray-300" : ""
+      }`}
+    >
+      <h1>Katita Franco</h1>
     </div>
   );
 };

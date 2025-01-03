@@ -1,46 +1,37 @@
-// Header.tsx
 import { useState } from "react";
-import Logo from "./Logo";
+import NavLinks from "./NavLinks";
 
 const Header = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => setNavbarOpen(!navbarOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-black text-white fixed w-full top-0 z-50">
-      <div className="flex items-center justify-between p-4">
-        <Logo />
-        <div className="flex items-center space-x-8">
-          <div
-            className="flex flex-col justify-center items-center cursor-pointer space-y-1"
-            onClick={toggleNavbar}
-          >
-            <div className="w-6 h-1 bg-white transition-all transform"></div>
-            <div className="w-6 h-1 bg-white transition-all transform"></div>
-            <div className="w-6 h-1 bg-white transition-all transform"></div>
-          </div>
+    <header className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90 transition-all duration-500">
+      <div className="relative flex justify-between items-center p-4">
+        {/* Logo */}
+        <div className="text-white text-2xl font-bold">
+          <a href="#home">
+            <span className="text-red-700">K</span>atita{" "}
+            <span className="text-red-700">F</span>ranco
+          </a>
+        </div>
 
-          {/* Menu */}
-          <nav
-            className={`absolute top-0 right-0 w-48 h-screen bg-black transition-all transform ${
-              navbarOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            <div className="flex flex-col items-center pt-20 space-y-8">
-              <a href="#home" className="text-white text-3xl">
-                Home
-              </a>
-              <a href="#projects" className="text-white text-3xl">
-                Projects
-              </a>
-              <a href="#contact" className="text-white text-3xl">
-                Contact
-              </a>
-            </div>
-          </nav>
+        {/* Menu Hamburger */}
+        <div
+          className={`menu flex flex-col justify-evenly w-10 h-10 cursor-pointer ${
+            isOpen ? "change" : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <div className="line line-1 bg-white transition-transform"></div>
+          <div className="line line-2 bg-white"></div>
+          <div className="line line-3 bg-white transition-transform"></div>
         </div>
       </div>
+
+      {/* Nav Links */}
+      <NavLinks isOpen={isOpen} />
     </header>
   );
 };
