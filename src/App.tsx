@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+/* import Header from "./components/Header";
 
 const App = () => {
   return (
@@ -22,6 +22,28 @@ const App = () => {
       >
         <h1 className="text-5xl">Contact Section</h1>
       </section>
+    </div>
+  );
+};
+
+export default App;
+ */
+
+import React from "react";
+import Header from "./components/Header";
+import HomeSection from "./sections/HomeSection";
+import ProjectsSection from "./sections/ProjectsSection";
+import ContactSection from "./sections/ContactSection";
+import Footer from "./components/Footer";
+
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <HomeSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };

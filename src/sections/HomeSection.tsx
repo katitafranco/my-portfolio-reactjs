@@ -12,19 +12,22 @@ export default HomeSection;
 
  */
 
+import backgroundImage from "../assets/codigo2.jpg";
+
 const HomeSection = () => (
   <section
-    id="home"
+    id="inicio"
     className="h-screen w-full bg-cover bg-center flex items-center justify-center"
-    style={{ backgroundImage: "url('../assets/codigo.jpg')" }}
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+    }}
   >
     <div className="text-center text-white">
       <h1 className="text-4xl md:text-6xl font-bold">
-        Bienvenido a mi portafolio ;)
+        Bienvenido a mi portafolio
       </h1>
-      <p className="mt-4 text-lg md:text-2xl">
-        Modern and Sophisticated Designs
-      </p>
+      <p className="mt-4 text-lg md:text-2xl">Diseños personalizados</p>
     </div>
   </section>
 );

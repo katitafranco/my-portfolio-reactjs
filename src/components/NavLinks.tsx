@@ -9,7 +9,7 @@ const NavLinks = ({ isOpen }: NavLinksProps) => {
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       } transition-all duration-500`}
     >
-      {["Home", "Projects", "Contact"].map((section) => (
+      {["Inicio", "Proyectos", "Contacto"].map((section) => (
         <a
           key={section}
           href={`#${section.toLowerCase()}`}

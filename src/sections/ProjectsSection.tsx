@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
@@ -22,6 +22,23 @@ const ProjectsSection = () => {
             {project}
           </div>
         ))}
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
+ */
+
+const ProjectsSection = () => {
+  return (
+    <section
+      id="proyectos"
+      className="h-screen w-full bg-red-100 flex items-center justify-center"
+    >
+      <div className="text-center text-black p-4">
+        <h2 className="text-3xl font-bold">My Projects</h2>
+        <p className="mt-4 text-xl">Here are some of my recent works.</p>
       </div>
     </section>
   );
