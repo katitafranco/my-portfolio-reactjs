@@ -8,7 +8,7 @@ const HamburgerMenu = ({
 }) => {
   return (
     <div
-      className={`menu flex flex-col justify-evenly w-10 h-10 cursor-pointer ${
+      className={`menu flex flex-col justify-evenly w-10 h-10 cursor-pointer z-50 ${
         isOpen ? "change" : ""
       }`}
       onClick={toggleMenu}

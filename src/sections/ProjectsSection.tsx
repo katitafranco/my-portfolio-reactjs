@@ -1,44 +1,24 @@
-/* import { useState } from "react";
+// components/ProjectsSection.tsx
 
-const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
-
-  const handleProjectClick = (projectId: string) => {
-    setSelectedProject(projectId === selectedProject ? null : projectId);
-  };
-
-  return (
-    <section id="projects" className="p-8">
-      <h2 className="text-2xl font-bold mb-4">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {["Project A", "Project B", "Project C"].map((project) => (
-          <div
-            key={project}
-            onClick={() => handleProjectClick(project)}
-            className={`p-4 border rounded-lg ${
-              selectedProject === project ? "bg-wine text-white" : "bg-white"
-            }`}
-          >
-            {project}
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default ProjectsSection;
- */
+import ProjectCard from "../components/ProjectCard2";
+import { projects } from "../data/projects";
 
 const ProjectsSection = () => {
   return (
-    <section
-      id="proyectos"
-      className="h-screen w-full bg-red-100 flex items-center justify-center"
-    >
-      <div className="text-center text-black p-4">
-        <h2 className="text-3xl font-bold">My Projects</h2>
-        <p className="mt-4 text-xl">Here are some of my recent works.</p>
+    <section id="proyectos" className="bg-purple-100 py-12">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-8">Proyectos</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              image={project.image}
+              description={project.description}
+              link={project.link}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

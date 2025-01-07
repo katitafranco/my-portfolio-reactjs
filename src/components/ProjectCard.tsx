@@ -1,36 +1,30 @@
-// src/components/ProjectCard.tsx
 import React from "react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  imageUrl: string;
   link: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
-  imageUrl,
   link,
-}) => (
-  <div className="max-w-sm rounded overflow-hidden shadow-lg bg-lightGray">
-    <img className="w-full" src={imageUrl} alt={title} />
-    <div className="px-6 py-4">
-      <h2 className="font-bold text-xl mb-2">{title}</h2>
-      <p className="text-gray-700 text-base">{description}</p>
-    </div>
-    <div className="px-6 py-4">
+}) => {
+  return (
+    <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-wine font-bold hover:underline"
+        className="text-blue-500 hover:underline"
       >
-        View Project
+        Ver más
       </a>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProjectCard;

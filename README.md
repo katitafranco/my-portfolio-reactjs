@@ -18,11 +18,11 @@ export default tseslint.config({
   languageOptions: {
     // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -31,11 +31,11 @@ export default tseslint.config({
 
 ```js
 // eslint.config.js
-import react from 'eslint-plugin-react'
+import react from "eslint-plugin-react";
 
 export default tseslint.config({
   // Set the react version
-  settings: { react: { version: '18.3' } },
+  settings: { react: { version: "18.3" } },
   plugins: {
     // Add the react plugin
     react,
@@ -44,7 +44,21 @@ export default tseslint.config({
     // other rules...
     // Enable its recommended rules
     ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
+    ...react.configs["jsx-runtime"].rules,
   },
-})
+});
 ```
+
+<!--
+https://katitafranco.github.io/web_spa_responsive/index.html
+https://katitafranco.github.io/dynamic-travel-sass/dist/index.html
+https://katitafranco.github.io/menu_hamburguesa/#
+https://katitafranco.github.io/biz-agency-site/
+https://katitafranco.github.io/flex-cotizador-hosting/
+https://github.com/katitafranco/crud-mern-stack
+https://katitafranco.github.io/slider-testimonios-js/
+https://www.facebook.com/katiuska.francotorres
+https://www.instagram.com/kattytafranco/
+https://x.com/katapili
+
+ -->

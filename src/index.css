@@ -117,3 +117,23 @@ button:focus-visible {
 .menu.change .line-3 {
   transform: translateY(-1rem) rotate(35deg);
 }
+header {
+  z-index: 100;
+}
+
+.nav-list {
+  z-index: 90; /* Asegúrate de que el menú tenga un índice más bajo que el header */
+}
+
+/* Agregar esto a tu archivo CSS */
+.text-border {
+  -webkit-text-stroke: 1px black; /* Grosor y color del borde */
+  /* color: transparent;  Asegura que el texto esté transparente */
+}
+
+.bg-custom-gradient {
+  background: rgba(253, 187, 45, 0.9);
+}
+
+/*// rgba(155, 28, 46, 1) 0%,
+   // rgba(0, 0, 0, 0.846) 54%*/
